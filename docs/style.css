@@ -43,6 +43,6 @@ input[aria-invalid="true"]{border-color:#9e2a25}
   #about .feature-image{order:1}
 }
 
-.top .brand{position:relative;flex:0 0 142px;height:72px;overflow:hidden;border-radius:4px;background:#fff}
-.brand-logo{position:absolute;width:164px;height:auto;max-width:none;left:-11px;top:-70px}
-@media(max-width:640px){.top .brand{flex-basis:125px;height:62px}.brand-logo{width:145px;left:-10px;top:-62px}}
+.top .brand{position:relative;flex:0 0 142px;height:85px;overflow:hidden;border-radius:4px;background:#fff}
+.brand-logo{position:absolute;width:174px;height:auto;max-width:none;left:-16px;top:-18px}
+@media(max-width:640px){.top .brand{flex-basis:125px;height:72px}.brand-logo{width:148px;left:-13px;top:-16px}}
