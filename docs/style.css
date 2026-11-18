@@ -9,3 +9,36 @@
 .field-error{margin:0;color:#9e2a25;font-size:.88rem}
 .field-error:empty{display:none}
 input[aria-invalid="true"]{border-color:#9e2a25}
+
+/* Photo-led sections */
+:root{--ink:#1c3027;--paper:#f8f9f6;--green:#284b3a;--line:#d8e2d8}
+.hero{display:block;position:relative;isolation:isolate;overflow:hidden;margin-block:28px 54px;padding:clamp(26px,6vw,80px);min-height:clamp(420px,55vw,590px);border-radius:16px;background-color:#294638;color:#fff;align-content:center}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#112a22f5 0%,#142f23e0 38%,#142f2380 72%,#142f2348),var(--hero-photo,none) center/cover}
+.hero .intro{padding:0;max-width:650px}
+.hero h1{max-width:14ch}
+.hero .intro>p:not(.label){color:#f0f4ed;max-width:48ch}
+.hero button{background:#e3eedf;color:#16372a}
+.hero-link{display:inline-block;margin:14px 0 0 18px;text-decoration:underline;text-underline-offset:4px}
+.feature{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:clamp(22px,5vw,74px)}
+.feature-image{min-height:clamp(260px,36vw,430px);border-radius:14px;background-color:#dce6dc;background-position:center;background-size:cover}
+.ledger-image{background-image:var(--ledger-photo,none)}
+.meeting-image{background-image:var(--meeting-photo,none)}
+.feature p,.faq p,.grid li{color:var(--muted)}
+.grid ul{padding-left:1.15rem;margin:0 0 20px;font-size:.92rem}
+.steps{margin:24px 0;padding-left:1.4rem}
+.steps li{padding-left:.4rem;margin-bottom:14px}
+.steps p{margin:.2rem 0 0}
+.faq{border-block:1px solid var(--line)}
+.faq h2{margin-bottom:20px}
+.faq details{border-top:1px solid var(--line);padding:14px 0}
+.faq summary{font-weight:650;cursor:pointer}
+.faq details p{max-width:65ch;margin:10px 0 0}
+#location .outline{margin:0 6px 8px 0}
+@media(max-width:680px){
+  .hero{margin-block:16px 32px;min-height:440px}
+  .hero::before{background-position:60% center}
+  .hero-link{display:block;margin:14px 0 0}
+  .feature{grid-template-columns:1fr}
+  .feature-image{min-height:245px}
+  #about .feature-image{order:1}
+}
