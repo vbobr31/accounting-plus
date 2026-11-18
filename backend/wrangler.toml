@@ -1,0 +1,11 @@
+name = "accounting-plus-booking"
+main = "worker.mjs"
+compatibility_date = "2026-11-18"
+
+[vars]
+SITE_ORIGIN = "https://vbobr31.github.io"
+
+[[ratelimits]]
+name = "BOOKING_LIMIT"
+namespace_id = "46321"
+simple = { limit = 6, period = 60 }
