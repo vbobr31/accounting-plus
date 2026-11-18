@@ -47,15 +47,17 @@ export default {
 
     const field = key => typeof data?.[key] === 'string' ? data[key].trim() : '';
     const name = field('name');
-    const contact = field('contact');
+    const phone = field('phone');
+    const email = field('email');
     const topic = field('topic');
     const time = field('time');
-    if (!name || name.length > 80 || !contact || contact.length > 120 ||
+    if (!name || name.length > 80 || !/^\+79\d{9}$/.test(phone) ||
+        email.length > 120 || (email && !/^[^\s@]+@[^\s@]+$/.test(email)) ||
         !topics.has(topic) || time.length > 100) return reply(400);
 
     const message = [
       'Новая заявка на консультацию · Бухгалтер Плюс',
-      `Имя: ${name}`, `Контакт: ${contact}`, `Тема: ${topic}`,
+      `Имя: ${name}`, `Телефон: ${phone}`, email && `Email: ${email}`, `Тема: ${topic === 'Общий вопрос' ? 'Другой вопрос' : topic}`,
       time && `Удобное время: ${time}`,
     ].filter(Boolean).join('\n');
 
